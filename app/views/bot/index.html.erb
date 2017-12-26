@@ -9,12 +9,12 @@
     <th>Percent Change</th>
     <th>Base Volume</th>
     <th>Quote Volume</th>
-    <th>Frozen?</th>
+    <th>Frozen</th>
     <th>24 Hour High</th>
     <th>24 Hour Low</th>
   </thead>
   <tbody>
-<% @data.each do |data| %>
+<% @presenter.return_ticker.each do |data| %>
   <tr>
   <td><%= data.currency %></td>
   <td><%= data.id %></td>
@@ -24,7 +24,7 @@
   <td><%= data.percent_change %></td>
   <td><%= data.base_volume %></td>
   <td><%= data.quote_volume %></td>
-  <td><%= data.is_frozen %></td>
+  <td><%= data.frozen %></td>
   <td><%= data.high_24_hr %></td>
   <td><%= data.low_24_hr %></td>
   </tr>
